@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using github"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    
+    <title>Search App - Client - Derechos</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '771194613458408',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v8.0'
+        });
+          
+        FB.AppEvents.logPageView();
+
+        FB.getLoginStatus(function(response) {
+          console.log(response);//statusChangeCallback(response);
+        });
+
+        FB.XFBML.parse();
+          
+      };
+
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+      
+    </script>
+    <div id="root">Derechos y obligaciones</div>
+  </body>
+</html>
